@@ -1,0 +1,563 @@
+{
+    "id": "adam-te",
+    "githubUrl": "https://github.com/adam-te",
+    "overall": {
+        "commits": 8199,
+        "additions": 559189,
+        "deletions": 457143
+    },
+    "repos": [
+        {
+            "name": "webapps",
+            "commits": 6656,
+            "additions": 455809,
+            "deletions": 404143
+        },
+        {
+            "name": "microfrontend-poc",
+            "commits": 18,
+            "additions": 19357,
+            "deletions": 2066
+        },
+        {
+            "name": "transaction-scripting-core",
+            "commits": 77,
+            "additions": 10216,
+            "deletions": 3872
+        },
+        {
+            "name": "internet-insights-frontend-service",
+            "commits": 17,
+            "additions": 8898,
+            "deletions": 1149
+        },
+        {
+            "name": "frontend-core",
+            "commits": 73,
+            "additions": 7844,
+            "deletions": 1782
+        },
+        {
+            "name": "transaction-scripting-ide",
+            "commits": 179,
+            "additions": 7454,
+            "deletions": 8942
+        },
+        {
+            "name": "endpoint-frontend-service",
+            "commits": 24,
+            "additions": 6757,
+            "deletions": 13821
+        },
+        {
+            "name": "dash-frontend-service",
+            "commits": 27,
+            "additions": 4412,
+            "deletions": 3226
+        },
+        {
+            "name": "transaction-scripting-recorder",
+            "commits": 65,
+            "additions": 3777,
+            "deletions": 1066
+        },
+        {
+            "name": "downdetection-frontend-service",
+            "commits": 49,
+            "additions": 3697,
+            "deletions": 832
+        },
+        {
+            "name": "webapps-deployment",
+            "commits": 95,
+            "additions": 3470,
+            "deletions": 266
+        },
+        {
+            "name": "graph-layouts",
+            "commits": 15,
+            "additions": 3434,
+            "deletions": 1206
+        },
+        {
+            "name": "cloudflow-sankey",
+            "commits": 4,
+            "additions": 2883,
+            "deletions": 975
+        },
+        {
+            "name": "microfrontend-utils",
+            "commits": 55,
+            "additions": 2767,
+            "deletions": 1072
+        },
+        {
+            "name": "rum-collector",
+            "commits": 38,
+            "additions": 2503,
+            "deletions": 310
+        },
+        {
+            "name": "productivity-dashboard",
+            "commits": 24,
+            "additions": 1790,
+            "deletions": 450
+        },
+        {
+            "name": "reports-service",
+            "commits": 36,
+            "additions": 1696,
+            "deletions": 463
+        },
+        {
+            "name": "transaction-command-extension",
+            "commits": 44,
+            "additions": 1172,
+            "deletions": 199
+        },
+        {
+            "name": "thousandeyes-service-graph",
+            "commits": 2,
+            "additions": 1002,
+            "deletions": 74
+        },
+        {
+            "name": "simulate-canary-deployment",
+            "commits": 3,
+            "additions": 758,
+            "deletions": 94
+        },
+        {
+            "name": "alert-translator",
+            "commits": 16,
+            "additions": 711,
+            "deletions": 257
+        },
+        {
+            "name": "transaction-scripting-code-editor",
+            "commits": 43,
+            "additions": 564,
+            "deletions": 365
+        },
+        {
+            "name": "finder",
+            "commits": 8,
+            "additions": 535,
+            "deletions": 2840
+        },
+        {
+            "name": "transaction-scripting-vm",
+            "commits": 8,
+            "additions": 515,
+            "deletions": 1700
+        },
+        {
+            "name": "netnames",
+            "commits": 11,
+            "additions": 508,
+            "deletions": 156
+        },
+        {
+            "name": "cloud-monitoring-frontend-service",
+            "commits": 24,
+            "additions": 494,
+            "deletions": 1030
+        },
+        {
+            "name": "backstage-software-templates",
+            "commits": 13,
+            "additions": 459,
+            "deletions": 917
+        },
+        {
+            "name": "olap-test-environment",
+            "commits": 3,
+            "additions": 403,
+            "deletions": 1
+        },
+        {
+            "name": "tomcat-redis-session-manager",
+            "commits": 1,
+            "additions": 370,
+            "deletions": 60
+        },
+        {
+            "name": "transaction-scripting-examples",
+            "commits": 16,
+            "additions": 367,
+            "deletions": 51
+        },
+        {
+            "name": "github-stats",
+            "commits": 7,
+            "additions": 349,
+            "deletions": 13
+        },
+        {
+            "name": "webapps-help-content",
+            "commits": 32,
+            "additions": 329,
+            "deletions": 43
+        },
+        {
+            "name": "terraform-cloudfront",
+            "commits": 30,
+            "additions": 328,
+            "deletions": 117
+        },
+        {
+            "name": "thousandeyes-aws-infrastructure",
+            "commits": 24,
+            "additions": 319,
+            "deletions": 400
+        },
+        {
+            "name": "revisor",
+            "commits": 10,
+            "additions": 292,
+            "deletions": 0
+        },
+        {
+            "name": "common-scheduled",
+            "commits": 30,
+            "additions": 232,
+            "deletions": 134
+        },
+        {
+            "name": "transaction-script-runner",
+            "commits": 1,
+            "additions": 231,
+            "deletions": 0
+        },
+        {
+            "name": "gradle-plugins",
+            "commits": 6,
+            "additions": 217,
+            "deletions": 903
+        },
+        {
+            "name": "wan-insights-frontend-service",
+            "commits": 6,
+            "additions": 204,
+            "deletions": 29
+        },
+        {
+            "name": "cea-frontend-service",
+            "commits": 1,
+            "additions": 202,
+            "deletions": 5
+        },
+        {
+            "name": "diagnostics",
+            "commits": 1,
+            "additions": 185,
+            "deletions": 93
+        },
+        {
+            "name": "scheduled",
+            "commits": 16,
+            "additions": 181,
+            "deletions": 94
+        },
+        {
+            "name": "babel-plugin-insert-after-expressions",
+            "commits": 1,
+            "additions": 160,
+            "deletions": 0
+        },
+        {
+            "name": "common-scheduled-deployment",
+            "commits": 11,
+            "additions": 157,
+            "deletions": 274
+        },
+        {
+            "name": "reports-frontend-service-deployment",
+            "commits": 3,
+            "additions": 154,
+            "deletions": 0
+        },
+        {
+            "name": "internet-insights-frontend-service-deployment",
+            "commits": 17,
+            "additions": 154,
+            "deletions": 0
+        },
+        {
+            "name": "te-configs",
+            "commits": 39,
+            "additions": 150,
+            "deletions": 8
+        },
+        {
+            "name": "docker-te-tomcat",
+            "commits": 25,
+            "additions": 117,
+            "deletions": 62
+        },
+        {
+            "name": "jenkins-agent-images",
+            "commits": 10,
+            "additions": 117,
+            "deletions": 135
+        },
+        {
+            "name": "coder-dotfiles",
+            "commits": 13,
+            "additions": 108,
+            "deletions": 70
+        },
+        {
+            "name": "kb-articles",
+            "commits": 1,
+            "additions": 77,
+            "deletions": 12
+        },
+        {
+            "name": "d3",
+            "commits": 9,
+            "additions": 42,
+            "deletions": 1200
+        },
+        {
+            "name": "alto-frontend-service-deployment",
+            "commits": 12,
+            "additions": 36,
+            "deletions": 2
+        },
+        {
+            "name": "sfdc-sandbox",
+            "commits": 5,
+            "additions": 33,
+            "deletions": 45
+        },
+        {
+            "name": "coder-workspace-templates",
+            "commits": 2,
+            "additions": 31,
+            "deletions": 4
+        },
+        {
+            "name": "outaged-data-model",
+            "commits": 12,
+            "additions": 24,
+            "deletions": 24
+        },
+        {
+            "name": "source-map",
+            "commits": 4,
+            "additions": 23,
+            "deletions": 5
+        },
+        {
+            "name": "device-notifications-translator",
+            "commits": 9,
+            "additions": 16,
+            "deletions": 16
+        },
+        {
+            "name": "angularjs-slider",
+            "commits": 1,
+            "additions": 16,
+            "deletions": 10
+        },
+        {
+            "name": "browser-data-service-api-models",
+            "commits": 2,
+            "additions": 10,
+            "deletions": 1
+        },
+        {
+            "name": "angular-ui-bootstrap",
+            "commits": 1,
+            "additions": 9,
+            "deletions": 2
+        },
+        {
+            "name": "browserbot",
+            "commits": 7,
+            "additions": 8,
+            "deletions": 3
+        },
+        {
+            "name": "ngInfiniteScroll",
+            "commits": 2,
+            "additions": 6,
+            "deletions": 1
+        },
+        {
+            "name": "te-releng-jenkins-slaves",
+            "commits": 2,
+            "additions": 5,
+            "deletions": 3
+        },
+        {
+            "name": "integrations-front-end-service",
+            "commits": 1,
+            "additions": 4,
+            "deletions": 13
+        },
+        {
+            "name": "webapps-blue",
+            "commits": 5,
+            "additions": 4,
+            "deletions": 4
+        },
+        {
+            "name": "audit-service",
+            "commits": 2,
+            "additions": 4,
+            "deletions": 4
+        },
+        {
+            "name": "te-data-models",
+            "commits": 2,
+            "additions": 4,
+            "deletions": 4
+        },
+        {
+            "name": "alert-parser",
+            "commits": 2,
+            "additions": 4,
+            "deletions": 4
+        },
+        {
+            "name": "zuora-api",
+            "commits": 2,
+            "additions": 4,
+            "deletions": 4
+        },
+        {
+            "name": "sfdc-api",
+            "commits": 2,
+            "additions": 4,
+            "deletions": 4
+        },
+        {
+            "name": "device-notifications-parser",
+            "commits": 2,
+            "additions": 4,
+            "deletions": 4
+        },
+        {
+            "name": "webapps-app-nginx-ingress",
+            "commits": 2,
+            "additions": 3,
+            "deletions": 1
+        },
+        {
+            "name": "argo-deployment",
+            "commits": 17,
+            "additions": 2,
+            "deletions": 0
+        },
+        {
+            "name": "samknows-volunteers-frontend-service",
+            "commits": 1,
+            "additions": 2,
+            "deletions": 0
+        },
+        {
+            "name": "wan-insights-frontend-service-deployment",
+            "commits": 3,
+            "additions": 2,
+            "deletions": 4
+        },
+        {
+            "name": "dash-frontend-service-deployment",
+            "commits": 48,
+            "additions": 2,
+            "deletions": 2
+        },
+        {
+            "name": "browser-data-service-client",
+            "commits": 1,
+            "additions": 1,
+            "deletions": 1
+        },
+        {
+            "name": "browser-data-service",
+            "commits": 1,
+            "additions": 1,
+            "deletions": 1
+        },
+        {
+            "name": "nesx-frontend-service-deployment",
+            "commits": 1,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "integrations-front-end-service-deployment",
+            "commits": 1,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "webapps-app-nginx-ingress-deployment",
+            "commits": 25,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "downdetection-frontend-service-deployment",
+            "commits": 7,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "runbooks",
+            "commits": 3,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "samknows-volunteers-frontend-service-deployment",
+            "commits": 2,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "cloud-monitoring-frontend-service-deployment",
+            "commits": 6,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "webapps-nginx-ingress-default-backend-deployment",
+            "commits": 3,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "jdnslib",
+            "commits": 1,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "eyebrow-controller-deployment",
+            "commits": 17,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "npm-version-plugin",
+            "commits": 1,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "puppet",
+            "commits": 2,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "engg-manual",
+            "commits": 43,
+            "additions": 0,
+            "deletions": 0
+        }
+    ]
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Adam's Code Stats</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Adam's Code Stats</h1>
+    </header>
+    <section>
+      <pre>
+        Commits: 8,199
+        Changes: 1,016,332
+        Additions: 559,189
+        Deletions: 457,143
+        Dates: 2014-01-01 to Present
+      </pre>
+
+      Biggest Contributions by Theme (additions only)
+      <pre>
+        ThousandEyes Web Core and Data Visualization (related repos)
+        475,943
+
+        Microfrontend Core
+        49,295
+
+        Synthetics Engine
+        33,183
+      </pre>
+
+      (See: the
+      <a
+        href="https://adam-te.github.io/contributor-stats/data/authors/adam-te/stats.json"
+        >repo by repo stats here</a
+      >)
+      <br />
+      (See: the
+      <a
+        href="https://adam-te.github.io/contributor-stats/data/authors/adam-te/commits.json"
+        >full commit history here</a
+      >)
+    </section>
+
+    <h2>Why compute this?</h2>
+    <section>
+      While quality and value add are the more important metrics over time,
+      lines of code is one of the few tangible artifacts that exist to give a
+      birds-eye view into somebody's contributions over time. Contributions can
+      be copy/pasted, faked or spoofed and easily gamed if desired, and while
+      it's never going to be perfect, efforts were made here to eliminate any
+      erroneous or "noisy" contributions
+    </section>
+    <section>
+      <h2>How was this computed?</h2>
+      <div>
+        <ul>
+          <li>
+            The entire github history was pulled for Adam via the
+            <a
+              href="https://github.com/adam-te/contributor-stats/blob/main/codeStats.ts#L22"
+              >fetchGithubContributions script</a
+            >
+          </li>
+          <li>
+            Then fairly rigorous efforts were made to eliminate any "noisy
+            contributions" or false positives
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        This includes:
+        <ul>
+          <li>
+            Every commit over 5,000 LoC was manually inspected for false
+            positives or copy/paste style changes and excluded if relevant (See:
+            below)
+          </li>
+          <li>
+            Every file change over 1,000 LoC was manually inspected and
+            explicitly ignored if not relevant (See: below)
+          </li>
+          <li>
+            Non-logic related file extensions are explicitly ignored, including
+            configuration files, such as XML and JSON, and image files (See:
+            below)
+          </li>
+          <li>
+            Forked or testing repos and associated commits are explicitly
+            ignored (See: below)
+          </li>
+          <li>
+            4 commits in this history are over 7,000 lines of code (squashed
+            branches), and no other commit is over 5,000 lines of code.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <h2>Script that was used to generate stats:</h2>
+    <pre><code class="language-javascript">
+        const ignoredRepos = new Set([
+          "danny-ee-test",
+          "webapps-ee-test",
+          "selenium-webdriver",
+          "webapps-ee-test",
+        ]);
+
+        // Various high copy/paste commits, manually inspected
+        const ignoredCommits = new Set([
+          "8988828517a3804bef84796b2f7a18219786bcd5",
+          "486be63857f852b7c38c67d0e3da5834aeffcdb5",
+          "754510b0efc0d710e8eaadedafab8f079df4490d",
+          "21cfec8c9939e50e817e5fdde165c22f5e200a1b",
+          "7b14080f4f031bbb0166a89842baf4c2b409f561",
+          "b9efda942d5018c3b03f8e4ee885ea358c94b239",
+          "64610dc0b122860ac8e70e80c4e209013fac1df4",
+          "07ec7dbf7b87c73b73eac053d918b16e4cc2c9e3",
+          "a944f534e0e3180b91d8a3cb7425905f681e96a2",
+          "00c3bbe466f1053348525560b6a78a59e4b358a2",
+          "527116ddab3aeae3dd677caa3a14ba05366fe195",
+          "bdecb0a3921cbd243faffaf6cb7b4c9f3bb9f2fc",
+        ]);
+
+        const ignoredFileTypes = new Set([
+          "md",
+          "png",
+          "jpg",
+          "jpeg",
+          "svg",
+          "json",
+          "gitignore",
+          "txt",
+          "lock",
+          "log",
+          "xml",
+          "txt",
+          "yaml",
+        ]);
+
+        await fetchGithubContributions({
+          org: "thousandeyes",
+          afterYear: 2014,
+          accessToken: ''/** Redacted */,
+          getShouldIgnoreCommit: (commit) =>
+            ignoredRepos.has(commit.repo) || ignoredCommits.has(commit.sha),
+          getShouldIgnoreFile: (fileName: string) => {
+            const fileType = fileName.split(".").at(-1) as string;
+            return (
+              ignoredFileTypes.has(fileType) ||
+              fileName.startsWith("frontend/1.41.0") ||
+              fileName.startsWith("public/monaco") ||
+              fileName.startsWith("frontend/src/js/libs") ||
+              fileName.startsWith("public/assets") ||
+              fileName.startsWith("anonymizedTopologies") ||
+              fileName.includes("load-test") ||
+              fileName.startsWith("frontend/src/js/common/ui/te-code-editor") ||
+              fileName ===
+                "frontend/src/pages/views/domain/cloudnative/stores/topology/data/mockData.json" ||
+              fileName.includes("__mocks__") ||
+              fileName.startsWith("helpers/incidents") ||
+              fileName.startsWith("client/src/monaco") ||
+              fileName.endsWith("services.js") ||
+              fileName.includes("/dist/")
+            );
+          },
+          getShouldFlagCommitAsSuspect: ({ totalAdditions, largestFileChanges }) => {
+            return totalAdditions > 5_000 || largestFileChanges > 1_000
+          },
+        });
+
+    </code></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-javascript.min.js"></script>
+  </body>
+</html>
