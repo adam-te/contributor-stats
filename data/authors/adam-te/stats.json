@@ -1,17 +1,84 @@
 {
     "id": "adam-te",
-    "githubUrl": "https://github.com/adam-te",
     "overall": {
-        "commits": 8199,
-        "additions": 559189,
-        "deletions": 457143
+        "commits": 8203,
+        "additions": 559187,
+        "deletions": 457141
     },
+    "byYear": [
+        {
+            "year": 2014,
+            "commits": 1925,
+            "additions": 150613,
+            "deletions": 132779
+        },
+        {
+            "year": 2015,
+            "commits": 2386,
+            "additions": 98337,
+            "deletions": 86460
+        },
+        {
+            "year": 2016,
+            "commits": 1096,
+            "additions": 77732,
+            "deletions": 53724
+        },
+        {
+            "year": 2017,
+            "commits": 512,
+            "additions": 36567,
+            "deletions": 40400
+        },
+        {
+            "year": 2018,
+            "commits": 263,
+            "additions": 39939,
+            "deletions": 32861
+        },
+        {
+            "year": 2019,
+            "commits": 643,
+            "additions": 39524,
+            "deletions": 27292
+        },
+        {
+            "year": 2020,
+            "commits": 312,
+            "additions": 28389,
+            "deletions": 11438
+        },
+        {
+            "year": 2021,
+            "commits": 152,
+            "additions": 14245,
+            "deletions": 19105
+        },
+        {
+            "year": 2022,
+            "commits": 212,
+            "additions": 27206,
+            "deletions": 21593
+        },
+        {
+            "year": 2023,
+            "commits": 453,
+            "additions": 28856,
+            "deletions": 18221
+        },
+        {
+            "year": 2024,
+            "commits": 249,
+            "additions": 17779,
+            "deletions": 13268
+        }
+    ],
     "repos": [
         {
             "name": "webapps",
             "commits": 6656,
-            "additions": 455809,
-            "deletions": 404143
+            "additions": 455807,
+            "deletions": 404141
         },
         {
             "name": "microfrontend-poc",
@@ -482,7 +549,19 @@
             "deletions": 1
         },
         {
+            "name": "webapps-app-nginx-ingress-deployment",
+            "commits": 28,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
             "name": "nesx-frontend-service-deployment",
+            "commits": 1,
+            "additions": 0,
+            "deletions": 0
+        },
+        {
+            "name": "alerts-domain-service-deployment",
             "commits": 1,
             "additions": 0,
             "deletions": 0
@@ -490,12 +569,6 @@
         {
             "name": "integrations-front-end-service-deployment",
             "commits": 1,
-            "additions": 0,
-            "deletions": 0
-        },
-        {
-            "name": "webapps-app-nginx-ingress-deployment",
-            "commits": 25,
             "additions": 0,
             "deletions": 0
         },
@@ -559,5 +632,6 @@
             "additions": 0,
             "deletions": 0
         }
-    ]
+    ],
+    "githubUrl": "https://github.com/adam-te"
 }

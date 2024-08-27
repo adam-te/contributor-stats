@@ -1,6 +1,7 @@
 export interface Author {
   login: string; //'adam-te',
   id: number; // 47219987,
+  date: string;
   node_id: string; //'MDQ6VXNlcjQ3MjE5OTg3',
   avatar_url: string; //'https://avatars.githubusercontent.com/u/47219987?v=4',
   gravatar_id: string; //'',
@@ -236,6 +237,8 @@ export interface GithubCommitHistory {
 
 export interface SearchCommit {
   sha: string;
+  date: string;
+  title: string;
   repo: string;
   files: RawCommitStats[];
 }
@@ -250,9 +253,14 @@ export interface RepoContributionStats extends ContributionStats {
   name: string;
 }
 
+export interface YearContributionStats extends ContributionStats {
+  year: number;
+}
+
 export interface GithubUserContributionStats {
   author: GithubUser;
   overall: ContributionStats;
+  byYear: YearContributionStats[];
   repos: RepoContributionStats[];
   notes?: string;
 }

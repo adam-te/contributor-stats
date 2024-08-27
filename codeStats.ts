@@ -5,6 +5,7 @@ import {
   GithubCommitHistory,
   GithubUserContributionStats,
   SearchCommit,
+  YearContributionStats,
 } from "./models";
 
 export { fetchGithubContributions };
@@ -51,6 +52,7 @@ function toDisplay(v: GithubUserContributionStats) {
   return {
     id: v.author.id,
     overall: v.overall,
+    byYear: v.byYear,
     repos: v.repos,
     notes: v.notes,
     githubUrl: `https://github.com/${v.author.id}`,
@@ -72,6 +74,7 @@ function computeChanges(
 ): GithubUserContributionStats {
   const overallStats = { commits: 0, additions: 0, deletions: 0 };
   const repoIdToStats: Record<string, ContributionStats> = {};
+  const yearToStats: Record<number, YearContributionStats> = {};
 
   // Filter out ignored commits and files
   const filteredCommits = commitHistory.commits
@@ -84,8 +87,14 @@ function computeChanges(
     }));
 
   for (const commit of filteredCommits) {
-    let totalAdditions = 0;
-    overallStats.commits += 1;
+    const year = new Date(commit.date).getFullYear();
+    const yearStats = (yearToStats[year] = yearToStats[year] || {
+      year,
+      commits: 0,
+      additions: 0,
+      deletions: 0,
+    });
+
     const repoStats = (repoIdToStats[commit.repo] = repoIdToStats[
       commit.repo
     ] || {
@@ -93,15 +102,18 @@ function computeChanges(
       additions: 0,
       deletions: 0,
     });
-    repoStats.commits += 1;
+
+    let totalAdditions = 0;
+    [overallStats, yearStats, repoStats].forEach((stats) => {
+      stats.commits += 1;
+    });
     for (const file of commit.files) {
       totalAdditions += file.additions;
 
-      overallStats.additions += file.additions;
-      overallStats.deletions += file.deletions;
-
-      repoStats.additions += file.additions;
-      repoStats.deletions += file.deletions;
+      [overallStats, yearStats, repoStats].forEach((stats) => {
+        stats.additions += file.additions;
+        stats.deletions += file.deletions;
+      });
     }
     if (config.getShouldFlagCommitAsSuspect({ totalAdditions })) {
       console.log(
@@ -118,6 +130,7 @@ function computeChanges(
   return {
     author: commitHistory.author,
     overall: overallStats,
+    byYear: Object.values(yearToStats).sort((a, b) => a.year - b.year),
     repos: Object.entries(repoIdToStats)
       .map(([repo, stats]) => ({ name: repo, ...stats }))
       .sort((a, b) => b.additions - a.additions),

@@ -238,6 +238,8 @@ export function createGithubApi({ accessToken }: { accessToken: string }) {
             aggValue.push(
               ...nextValue.items.map((v) => ({
                 sha: v.sha,
+                date: v.commit.author.date,
+                title: v.commit.message.split("\n")[0],
                 repo: v.repository.name,
                 files: [],
               }))
